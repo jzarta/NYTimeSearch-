@@ -17,44 +17,27 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 app.use(express.static('./public'));
 
-// -------------------------------------------------
+// ==========================================
 
-// MongoDB Configuration configuration (Change this URL to your own DB)
+// MongoDB Configuration configuration 
 var databaseUrl = 'nytreact';
 var collections = ["nytreact"];
 
-// use mongojs to hook the database to the db variable 
+// Use mongojs to hook the database to the db variable. 
 var db = mongojs(databaseUrl, collections);
 
 db.on('error', function (err) {
   console.log('MongoDB Error: ', err);
 });
 
-// -------------------------------------------------
-
-// Main Route. This route will redirect to our rendered React application
+// ============================================================
+// Main Route which redirect to our rendered React app.
 app.get('/', function(req, res){
-	console.log("Im loading the Index page.");
+	console.log("Loading the Index page.");
   res.sendFile('./public/index.html');
 });
 
-// This is the route we will send POST requests to save each search.
-// app.post('/api/', function(req, res){
-//   console.log("BODY: " + req.body);
-
-//   // Here we'll save the location based on the JSON input. 
-//   // We'll use Date.now() to always get the current date time
-//   db.history.insert({"title": req.body.title, "date": Date.now(), "url": req.body.url}, function(err){
-//     if(err){
-//       console.log(err);
-//     }
-//     else {
-//       res.send("Saved Search");
-//     }
-//   })
-// });
-
-// -------------------------------------------------
+// ============================================================
 
 // Listener
 app.listen(PORT, function() {
