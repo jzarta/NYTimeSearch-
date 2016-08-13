@@ -1,0 +1,22 @@
+{
+  "name": "nytsearch",
+  "version": "1.0.0",
+  "description": "react application using nyt api ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jzarta/NYTimeSearch-.git"
+  },
+  "keywords": [
+    "j&z"
+  ],
+  "author": "Jorge Zarta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jzarta/NYTimeSearch-/issues"
+  },
+  "homepage": "https://github.com/jzarta/NYTimeSearch-#readme"
+}
