@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/jzarta/NYTimeSearch-/issues"
   },
-  "homepage": "https://github.com/jzarta/NYTimeSearch-#readme"
+  "homepage": "https://github.com/jzarta/NYTimeSearch-#readme",
+  "dependencies": {
+    "react": "^15.3.0",
+    "react-router": "^2.6.1"
+  }
 }
